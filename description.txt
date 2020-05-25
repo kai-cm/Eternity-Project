@@ -1,0 +1,20 @@
+func exponential
+@parameter doulble x - base number 
+@parameter doulble n - powernumber
+
+it covers when n is zero and negative.
+But it doesn't cover when n has below decimal point such 1.5
+
+func ln
+@parameter double x
+ln x= loge X = y
+reference -https://stackoverflow.com/questions/35968963/trying-to-calculate-logarithm-base-10-without-math-h-really-close-just-having
+
+func log
+@parameter double x
+it's when the base is 10
+
+func log
+@parameter double b
+@parameter double v
+Usage of identity logb x = ln x / ln b
