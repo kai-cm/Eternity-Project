@@ -1,0 +1,40 @@
+public class Sin { 
+	
+	public double calculate(int number) { //function to calculate the sin of a number
+		
+		//sin x = x - x^3/3! + x^5/5! - x^7/7! + ...
+		int power = 1;
+		double sinX = 0.0;
+		double radians = Math.toRadians(number); //converting to radians
+		
+		//10 iterations for precision
+		for(int i = 1; i<=10; i++) {
+			
+			double currentTerm = 0.0;
+			
+			if(i%2 == 0) { //if the term's position is even, subtract 
+				currentTerm = -Math.pow(radians, power)/getFactorial(power);
+			}
+			
+			else { //else add
+				currentTerm = Math.pow(radians, power)/getFactorial(power);
+			}
+			
+			sinX = sinX + currentTerm; //add the term to final result
+			power = power +2; //increase power by 2
+		}
+		
+		return sinX;
+	}
+	
+	static int getFactorial(int n) { //function to calculate the factorial of a number
+		
+		int fact = 1; //if n = 1, return 1
+		
+		for(int i = 1; i<=n; i++) { //loop through n times
+			
+			fact = fact*i;
+		}
+		return fact;
+	}	
+}
