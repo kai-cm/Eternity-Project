@@ -30,7 +30,7 @@ public class Menu {
 			System.out.println(""
 					+ "Please select a function: \n\n"
 					+ "Press 1 for sin(x);\n"
-					+ "Press 2 for\n"
+					+ "Press 2 for MAD;\n"
 					+ "Press 3 for\n"
 					+ "Press 4 for\n"
 					+ "Press 5 for\n"
@@ -53,8 +53,17 @@ public class Menu {
 				Sin sin = new Sin(); //Creates a new sin object
 				
 				System.out.println("\nThe result of sin(" + x + ") is: " + sin.calculate(x) + "\n\n***********************************");
-								
+							
+				break;
 			case 2:
+				
+				System.out.println("You chose MAD.\n");
+				
+				MAD.MADfunction();
+				
+				System.out.println("\n***********************************");
+				
+				break;
 				
 			case 3:
 			
