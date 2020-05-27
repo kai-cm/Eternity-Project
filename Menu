@@ -31,7 +31,7 @@ public class Menu {
 					+ "Please select a function: \n\n"
 					+ "Press 1 for sin(x);\n"
 					+ "Press 2 for MAD;\n"
-					+ "Press 3 for\n"
+					+ "Press 3 for log(x)\n"
 					+ "Press 4 for\n"
 					+ "Press 5 for\n"
 					+ "Press 6 for\n"
@@ -59,14 +59,23 @@ public class Menu {
 				
 				System.out.println("You chose MAD.\n");
 				
-				MAD.MADfunction();
+				MAD.MADfunction(); //Calling MAD function in a static way
 				
 				System.out.println("\n***********************************");
 				
 				break;
 				
 			case 3:
+				
+				System.out.print("You chose log(x).\n"
+						+ "Please enter x: ");
+				
+				int x2 = scanner.nextInt();
+						
+				System.out.println("\nThe result of log(" + x2 + ") is: " + Log.log(x2) + "\n\n***********************************");
 			
+				break;
+				
 			case 4:
 				
 			case 5:
@@ -80,11 +89,11 @@ public class Menu {
 						+ "***********************************");
 				back = true;
 				break;
-
+				
 			default:
-				//If invalid, try again		
-				System.out.println("Invalid number. Try again\n\n"
-						+ "***********************************");
+					//If invalid, try again		
+					System.out.println("Invalid number. Try again\n\n"
+							+ "***********************************");
 			}
 			}
 			
@@ -99,7 +108,8 @@ public class Menu {
 		
 		else {
 			//If invalid, try again		
-			System.out.println("Invalid number. Try again");
+			System.out.println("Invalid number. Try again\n\n"
+					+ "***********************************");
 		}
 
 	}
