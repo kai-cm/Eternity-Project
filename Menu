@@ -80,6 +80,11 @@ public class Menu {
 						+ "***********************************");
 				back = true;
 				break;
+
+			default:
+				//If invalid, try again		
+				System.out.println("Invalid number. Try again\n\n"
+						+ "***********************************");
 			}
 			}
 			
