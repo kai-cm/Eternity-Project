@@ -49,8 +49,6 @@ public class MAD
         float mad = (float)addedDistances / userEntries.size();
 
         System.out.println("The Mean absolute deviation is: " + mad);
-
-        scanner.close();
     }
 
     private static boolean EntryIsInteger(String userEntry)
